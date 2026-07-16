@@ -128,32 +128,23 @@ This project is designed as a backend portfolio project suitable for internships
 # 🏗 Architecture
 
 The project follows a **Layered Architecture**, where each layer has a single responsibility.
-
 ```mermaid
 flowchart TD
 
-A[Client / React / Postman / Swagger]
-        │
-        ▼
-B[StudentController]
-        │
-        ▼
-C[DTO Validation]
-        │
-        ▼
-D[StudentService]
-        │
-        ├──────────────► E[ModelMapper]
-        │                   DTO ⇄ Entity
-        │
-        ▼
-F[StudentRepository]
-        │
-        ▼
-G[(MySQL Database)]
-        │
-        ▲
-H[Global Exception Handler]
+A["Client<br/>React<br/>Postman<br/>Swagger"]
+    --> B["Student Controller"]
+
+B --> C["Bean Validation"]
+
+C --> D["Student Service"]
+
+D --> E["ModelMapper"]
+
+D --> F["Student Repository"]
+
+F --> G[("MySQL Database")]
+
+D -. Exception .-> H["Global Exception Handler"]
 ```
 
 ### Request Flow
