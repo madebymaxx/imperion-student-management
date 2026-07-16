@@ -21,7 +21,7 @@ public class Student {
     private int rollno;
     private String course;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(
             name = "student_subjects",
             joinColumns = @JoinColumn(name = "student_id")

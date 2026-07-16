@@ -2,6 +2,8 @@
 
 # 🎓 Imperion Student Management
 
+![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=for-the-badge)
+
 ### A Production-Ready Student Management REST API built with Spring Boot
 
 <p>

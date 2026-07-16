@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
-@RequestMapping("/api/students")
+@RequestMapping("/api/v1/students")
 @Tag(
         name = "Student Management",
         description = "REST APIs for Student Management System"
