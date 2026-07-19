@@ -285,20 +285,17 @@ cd imperion-student-management/backend
 
 ## Configure Database
 
-Open
+Create the following environment variables before running the application.
 
-```
-src/main/resources/application.properties
-```
-
-Update
-
-```properties
-spring.datasource.username=root
-spring.datasource.password=your_password
+```text
+DB_URL=jdbc:mysql://localhost:3306/student_management_db?createDatabaseIfNotExist=true
+DB_USERNAME=root
+DB_PASSWORD=your_password
 ```
 
-Database will automatically be created.
+The application reads these values automatically from your system environment variables.
+
+> **Note:** Make sure these environment variables are configured before starting the application.
 
 ---
 
